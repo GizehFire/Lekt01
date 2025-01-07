@@ -43,9 +43,6 @@ void ShowVersion(void) {
     
     std::cout << "Funktion: " << __func__ << "[" << __PRETTY_FUNCTION__ << "]" << std::endl;  
 
-    
-
-    
 }
 
 int main(int argc, char *argv[]) {
