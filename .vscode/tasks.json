@@ -1,0 +1,38 @@
+{
+    "tasks": [
+        {
+            "type": "cppbuild",
+            "label": "C/C++: g++ Aktive Datei kompilieren",
+            "command": "/usr/bin/g++",
+            "args": [     
+                "-std=c++17",           
+                "-fdiagnostics-color=always",
+                "${file}",                
+                "-I/usr/include/x86_64-linux-gnu/qt5",
+                "-I/usr/include/x86_64-linux-gnu/qt5/QtWidgets",
+                "-I/usr/include/x86_64-linux-gnu/qt5/QtCore",
+                "-o",
+                "${fileDirname}/${fileBasenameNoExtension}",
+                "-g",
+                "-lsfml-graphics",
+                "-lsfml-window",                
+                "-lsfml-system",
+                "-lQt5Widgets",
+                "-lQt5Core",
+                "-fPIC" 
+            ],
+            "options": {
+                "cwd": "${fileDirname}"
+            },
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "detail": "Vom Debugger generierte Aufgabe."
+        }
+    ],
+    "version": "2.0.0"
+}
