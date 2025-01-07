@@ -1,0 +1,29 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "C++ Debug", // Name der Konfiguration
+            "type": "cppdbg", // Typ für C++ Debugging
+            "request": "launch", // Typ der Anfrage (Launch oder Attach)
+            "program": "${fileDirname}/${fileBasenameNoExtension}", // Automatische Erkennung der ausführbaren Datei basierend auf Task
+            "args": [], // Zusätzliche Argumente für das Programm
+            "stopAtEntry": false, // Stopp beim Programmeintrittspunkt
+            "cwd": "${fileDirname}", // Arbeitsverzeichnis
+            "environment": [], // Zusätzliche Umgebungsvariablen
+            "externalConsole": true, // Externe Konsole verwenden
+            "MIMode": "gdb", // Debugger-Modus (z.B. gdb oder lldb)
+            "miDebuggerPath": "/usr/bin/gdb", // Pfad zum Debugger (an dein System anpassen)
+            "setupCommands": [
+                {
+                    "description": "Aktiviert die erweiterte gdb-Funktionalität",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                }
+            ],
+            "preLaunchTask": "C/C++: g++ Aktive Datei kompilieren", // Entspricht der Task aus deiner tasks.json
+            "logging": {
+                "engineLogging": true
+            }
+        }
+    ]
+}
