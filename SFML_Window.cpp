@@ -70,7 +70,7 @@ int main(int argc, char *argv[]) {
         while (window.pollEvent(event)) {
             if (event.type == sf::Event::Closed) {
                 window.close();
-                QMessageBox::information(nullptr, "Hinweis", "Auf Wiedersehen");
+                QMessageBox::information(nullptr, "HINWEIS", "Auf Wiedersehen");
             }
         }
 
