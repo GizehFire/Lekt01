@@ -2,6 +2,7 @@
 #include <QMessageBox>
 #include <SFML/Graphics.hpp>
 #include <iostream>
+#include "Bat.h"
 
 void handleRectangleMovement(sf::RectangleShape& rectangle) {
 
@@ -46,11 +47,14 @@ void ShowVersion(void) {
 }
 
 int main(int argc, char *argv[]) {
+    
+    Bat bat(1920 / 2, 1080 - 20);
+    bat.moveLeft();
+   
     QApplication app(argc, argv);
 
-
     ShowVersion();
-    
+
     sf::RenderWindow window(sf::VideoMode(800, 600), "Mein erstes SFML-Programm!");
     window.setPosition(sf::Vector2i(10, 50));
     window.setFramerateLimit(60);

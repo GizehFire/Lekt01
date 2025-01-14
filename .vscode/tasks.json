@@ -7,7 +7,9 @@
             "args": [     
                 "-std=c++17",           
                 "-fdiagnostics-color=always",
-                "${file}",                
+                "${file}",
+                "Bath.cpp",
+                "Ball.cpp",                
                 "-I/usr/include/x86_64-linux-gnu/qt5",
                 "-I/usr/include/x86_64-linux-gnu/qt5/QtWidgets",
                 "-I/usr/include/x86_64-linux-gnu/qt5/QtCore",
@@ -19,7 +21,7 @@
                 "-lsfml-system",
                 "-lQt5Widgets",
                 "-lQt5Core",
-                "-fPIC" 
+                  "-fPIC" 
             ],
             "options": {
                 "cwd": "${fileDirname}"
